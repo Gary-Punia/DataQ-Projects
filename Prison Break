@@ -1,0 +1,8 @@
+
+## Modify the data variable (Contains the wiki article) so thta last element of each row isn't present anymore
+index=0
+for row in data:
+    row[0]= fetch_year(row[0])    
+    data[index]=row[:-1]        # Assigning row without it's last elementto data[index]
+    index+=1                     # Here data is a list, increatring it by 1 to cover all the rows
+    print(data[:4])
